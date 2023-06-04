@@ -15,8 +15,7 @@
       "no-unused-vars": "error", // No unused variables
       "no-console": "error", // No console log/error/info
       "no-undef": "error", // No unefined
-      "no-unreachable": "error",
-      "consistent-type-definitions": ["error", "type"]
+      "no-unreachable": "error"
     },
   
     "env": {
