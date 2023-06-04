@@ -1,6 +1,6 @@
 import { User } from './users.model'
 
-let lastUserId = 0
+// let _lastUserId = 0
 
 // Getting the id of the last entry of the user
 export const findLastUserId = async () => {

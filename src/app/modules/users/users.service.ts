@@ -1,4 +1,5 @@
 import config from '../../../config'
+import { successLogger } from '../../../shared/logger'
 import { IUser } from './users.interface'
 import { User } from './users.model'
 import { generateUserId } from './users.utils'
@@ -9,9 +10,9 @@ const createUser = async (user: IUser): Promise<IUser | null> => {
   user.id = id as string
   // default password
   if (!user?.password) {
-    user.password = config.defaultPassword as string
+    user.password = config.default_user_pass as string
   }
-  console.log('user.password', config.defaultPassword)
+  successLogger.info('user.password', config.default_user_pass)
 
   const createdUser = await User.create(user)
 
