@@ -1,4 +1,4 @@
-import { User } from './users.model'
+import { User } from './user.model'
 
 // let _lastUserId = 0
 
