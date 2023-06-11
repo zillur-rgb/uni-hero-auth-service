@@ -1,4 +1,4 @@
-import express, { Application } from 'express'
+import express, { Application, Request, Response } from 'express'
 import cors from 'cors'
 import globalErrorHandler from './middleware/globalErrorHandler'
 import { UserRoutes } from './app/modules/users/user.route'
@@ -12,11 +12,11 @@ app.use(express.urlencoded({ extended: true }))
 // Aplication route
 app.use('/api/v1/users', UserRoutes)
 
-// app.get('/', async (req: Request, res: Response, next: NextFunction) => {
-//   // res.send('Hello World!')
-//   // next()
-//   throw new ApiError(401, 'Forbidden')
-// })
+app.get('/', async (req: Request, res: Response) => {
+  res.send('Hello World!')
+  // next()
+  //   throw new ApiError(401, 'Forbidden')
+})
 
 // Global error handler
 app.use(globalErrorHandler)
