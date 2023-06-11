@@ -1,1 +1,24 @@
 {"level":"info","message":"Application is listening on port 8080"}
+{"level":"info","message":"Application is listening on port 8080"}
+{"level":"info","message":"Application is listening on port 8080"}
+{"level":"info","message":"Application is listening on port 8080"}
+2023-06-11T16:28:04.714Z [right meow!] info: Application is listening on port 8080
+2023-06-11T16:28:41.937Z [right meow!] info: Application is listening on port 8080
+2023-06-11T16:28:52.136Z [right meow!] info: Application is listening on port 8080
+2023-06-11T16:29:10.634Z [right meow!] info: Application is listening on port 8080
+2023-06-11T16:32:19.938Z [right meow!] info: Application is listening on port 8080
+Sun Jun 11 2023 18:36:44 [right meow!] info: Application is listening on port 8080
+Sun Jun 11 2023 18:37:12 [UH Success] info: Application is listening on port 8080
+Sun Jun 11 2023 18:39:40 [UH Success] info: Application is listening on port 8080
+{
+  message: 'Application is listening on port 8080',
+  level: 'info',
+  label: 'UH Success',
+  timestamp: '2023-06-11T16:40:41.697Z'
+}
+{
+  message: 'Application is listening on port 8080',
+  level: 'info',
+  label: 'UH Success',
+  timestamp: '2023-06-11T16:40:53.370Z'
+}

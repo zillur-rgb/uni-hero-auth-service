@@ -1,24 +1,47 @@
 /* eslint-disable no-undef */
-import winston from 'winston'
+import { createLogger, format, transports } from 'winston'
 import path from 'path'
 
-const successLogger = winston.createLogger({
+const { combine, timestamp, label, printf, prettyPrint } = format
+
+// Adding customize logging message format
+const myFormat = printf(({ level, message, label, timestamp }) => {
+  const date = new Date(timestamp)
+  const hour = date.getHours()
+  const minutes = date.getMinutes()
+  const seconds = date.getSeconds()
+  return `${date.toDateString()} ${hour}:${minutes}:${seconds} [${label}] ${level}: ${message}`
+})
+
+const successLogger = createLogger({
   level: 'info',
-  format: winston.format.json(),
+  // And in here we are utilizing the function we created for formatting
+  format: combine(
+    label({ label: 'UH Success' }),
+    timestamp(),
+    myFormat,
+    prettyPrint(),
+  ),
   transports: [
-    new winston.transports.Console(),
-    new winston.transports.File({
+    new transports.Console(),
+    new transports.File({
       filename: path.join(process.cwd(), 'logs', 'winston', 'success.log'),
       level: 'info',
     }),
   ],
 })
-const errorLogger = winston.createLogger({
+const errorLogger = createLogger({
   level: 'error',
-  format: winston.format.json(),
+  // And in here we are utilizing the function we created for formatting
+  format: combine(
+    label({ label: 'UH Success' }),
+    timestamp(),
+    myFormat,
+    prettyPrint(),
+  ),
   transports: [
-    new winston.transports.Console(),
-    new winston.transports.File({
+    new transports.Console(),
+    new transports.File({
       filename: path.join(process.cwd(), 'logs', 'winston', 'error.log'),
       level: 'error',
     }),
