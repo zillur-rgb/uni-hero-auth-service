@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "/home/zillur-rgb/working-projects/uni-hero/server/logs/winston/successes/.0850ea66f9d0766ff2f570720fedeab61882345d-audit.json",
+    "files": [
+        {
+            "date": 1686508808484,
+            "name": "/home/zillur-rgb/working-projects/uni-hero/server/logs/winston/successes/UH-2023-06-11-20-success.log",
+            "hash": "d986b0a5ed2d329c299d13c7153fa404414cdc75c7e3b82d105a8cb72d358a25"
+        }
+    ],
+    "hashType": "sha256"
+}
