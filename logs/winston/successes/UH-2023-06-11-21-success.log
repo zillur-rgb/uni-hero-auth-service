@@ -1,0 +1,6 @@
+{
+  message: 'Application is listening on port 8080',
+  level: 'info',
+  label: 'UH Success',
+  timestamp: '2023-06-11T19:41:58.757Z'
+}
