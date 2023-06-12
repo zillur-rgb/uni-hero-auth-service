@@ -19,6 +19,11 @@
             "date": 1686583745729,
             "name": "/home/zillur-rgb/Documents/GitHub/uni-hero-auth-service/logs/winston/errors/UH-2023-06-12-17-error.log",
             "hash": "fe79e54e232e30a387e8ee2aefb8282378d47799cf1970992233cd8b73956024"
+        },
+        {
+            "date": 1686587041352,
+            "name": "/home/zillur-rgb/Documents/GitHub/uni-hero-auth-service/logs/winston/errors/UH-2023-06-12-18-error.log",
+            "hash": "4b2435f4f8a08ed7c0813c44e2cf5ba52b6dd1048a4c7ea1d301b9eee6b52f58"
         }
     ],
     "hashType": "sha256"
