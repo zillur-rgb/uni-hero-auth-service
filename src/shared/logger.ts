@@ -1,9 +1,9 @@
 /* eslint-disable no-undef */
-import winston, { createLogger, format, transports } from 'winston'
+import { createLogger, format, transports } from 'winston'
 import path from 'path'
-import 'winston-daily-rotate-file'
+import DailyRotateFile from 'winston-daily-rotate-file'
 
-const { combine, timestamp, label, printf, prettyPrint } = format
+const { combine, timestamp, label, printf } = format
 
 // Adding customize logging message format
 const myFormat = printf(({ level, message, label, timestamp }) => {
@@ -17,20 +17,11 @@ const myFormat = printf(({ level, message, label, timestamp }) => {
 const successLogger = createLogger({
   level: 'info',
   // And in here we are utilizing the function we created for formatting
-  format: combine(
-    label({ label: 'UH Success' }),
-    timestamp(),
-    myFormat,
-    prettyPrint(),
-  ),
+  format: combine(label({ label: 'UH Success' }), timestamp(), myFormat),
   transports: [
     new transports.Console(),
-    new transports.File({
-      filename: path.join(process.cwd(), 'logs', 'winston', 'success.log'),
-      level: 'info',
-    }),
 
-    new winston.transports.DailyRotateFile({
+    new DailyRotateFile({
       level: 'info',
       filename: path.join(
         process.cwd(),
@@ -49,15 +40,10 @@ const successLogger = createLogger({
 const errorLogger = createLogger({
   level: 'error',
   // And in here we are utilizing the function we created for formatting
-  format: combine(
-    label({ label: 'UH Success' }),
-    timestamp(),
-    myFormat,
-    prettyPrint(),
-  ),
+  format: combine(label({ label: 'UH Error' }), timestamp(), myFormat),
   transports: [
     new transports.Console(),
-    new winston.transports.DailyRotateFile({
+    new DailyRotateFile({
       level: 'error',
       filename: path.join(
         process.cwd(),

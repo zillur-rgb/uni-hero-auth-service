@@ -19,6 +19,21 @@
             "date": 1686514102843,
             "name": "/home/zillur-rgb/working-projects/uni-hero/server/logs/winston/errors/UH-2023-06-11-22-error.log",
             "hash": "e8f3a8656782bf5e94f895f49e4c6ba4a170980afbfe716f9d52a013d299c893"
+        },
+        {
+            "date": 1686522340544,
+            "name": "/home/zillur-rgb/working-projects/uni-hero/server/logs/winston/errors/UH-2023-06-12-00-error.log",
+            "hash": "b20458bfc1721e6d252f23ea7bff41cd36464f67aace66c774a4fc5b502a7268"
+        },
+        {
+            "date": 1686561064124,
+            "name": "/home/zillur-rgb/working-projects/uni-hero/server/logs/winston/errors/UH-2023-06-12-11-error.log",
+            "hash": "0be280603e45377c607e2d5f0c4dd4bd034c031a737e8a6f2ed3c4eb77fe8c07"
+        },
+        {
+            "date": 1686564889403,
+            "name": "/home/zillur-rgb/working-projects/uni-hero/server/logs/winston/errors/UH-2023-06-12-12-error.log",
+            "hash": "2417e459d21937713dd0f961db3e44e25868ef2dbed0f3d501adf6b100ce83eb"
         }
     ],
     "hashType": "sha256"
