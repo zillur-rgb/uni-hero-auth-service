@@ -34,6 +34,11 @@
             "date": 1686564889403,
             "name": "/home/zillur-rgb/working-projects/uni-hero/server/logs/winston/errors/UH-2023-06-12-12-error.log",
             "hash": "2417e459d21937713dd0f961db3e44e25868ef2dbed0f3d501adf6b100ce83eb"
+        },
+        {
+            "date": 1686568377863,
+            "name": "/home/zillur-rgb/working-projects/uni-hero/server/logs/winston/errors/UH-2023-06-12-13-error.log",
+            "hash": "f8d766ca9a996e5bf0cf24874e19f459093f4c0202ce68b5295ed71d09cdb4d6"
         }
     ],
     "hashType": "sha256"
