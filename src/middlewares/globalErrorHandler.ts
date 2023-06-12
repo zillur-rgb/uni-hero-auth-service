@@ -1,10 +1,18 @@
+/* eslint-disable no-console */
 import { ErrorRequestHandler } from 'express'
 import config from '../config'
 import { IGenericErrorMessage } from '../types/error.type'
 import handleValidationError from '../errors/handleValidationError'
 import ApiError from '../errors/ApiError'
+import { errorLogger } from '../shared/logger'
 
 const globalErrorHandler: ErrorRequestHandler = (error, req, res, next) => {
+  // console is enough for us to see the logs in development mode but
+  // it is not enough in pproduction mode
+  config.env === 'development'
+    ? console.log('Global error handler: ', error)
+    : errorLogger.error('Global error handler: ', error)
+
   let statusCode = 500
   let message = 'Something went worng!'
   let errorMessages: IGenericErrorMessage[] = []
