@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "/home/zillur-rgb/Documents/GitHub/uni-hero-auth-service/logs/winston/errors/.066b85f3654a4a1c731dff4a80bf03e0e3406cc5-audit.json",
+    "files": [
+        {
+            "date": 1686576590484,
+            "name": "/home/zillur-rgb/Documents/GitHub/uni-hero-auth-service/logs/winston/errors/UH-2023-06-12-15-error.log",
+            "hash": "76d679de851a2f5b36166f1f9af2c69e002f726c4e00560ce5c29f443150333b"
+        }
+    ],
+    "hashType": "sha256"
+}

@@ -1,7 +1,8 @@
 import express, { Application, Request, Response } from 'express'
 import cors from 'cors'
-import globalErrorHandler from './middleware/globalErrorHandler'
-import { UserRoutes } from './app/modules/users/user.route'
+import { UserRoute } from './app/modules/user/user.routes'
+import globalErrorHandler from './middlewares/globalErrorHandler'
+import ApiError from './errors/ApiError'
 
 const app: Application = express()
 
@@ -10,12 +11,12 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
 // Aplication route
-app.use('/api/v1/users', UserRoutes)
+app.use('/api/v1/users', UserRoute)
 
 app.get('/', async (req: Request, res: Response) => {
-  res.send('Hello World!')
+  // res.send('Hello World!')
   // next()
-  //   throw new ApiError(401, 'Forbidden')
+  throw new ApiError(401, 'Forbidden')
 })
 
 // Global error handler
