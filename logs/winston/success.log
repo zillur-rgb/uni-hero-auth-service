@@ -1,3 +1,10 @@
+{"level":"info","message":"Application is listening on port 8080"}
+{"level":"info","message":"Application is listening on port 8080"}
+{"level":"info","message":"Application is listening on port 8080"}
+{"level":"info","message":"Application is listening on port 8080"}
+{"level":"info","message":"Application is listening on port 8080"}
+{"level":"info","message":"Application is listening on port 8080"}
+{"level":"info","message":"Application is listening on port 8080"}
 {
   message: 'Application is listening on port 8080',
   level: 'info',
