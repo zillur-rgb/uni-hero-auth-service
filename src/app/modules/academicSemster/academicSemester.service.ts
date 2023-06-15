@@ -5,7 +5,7 @@ import { IAcadmeicSemester } from './academicSemester.interface';
 import { AcademicSemester } from './academicSemester.model';
 import { IPaginationTypes } from '../../../types/pagination';
 import { IGenericResponse } from '../../../types/common.types';
-import { paginationHelpers } from '../../../helpers/oaginationHelprs';
+import { paginationHelpers } from '../../../helpers/paginationHelpers';
 import { SortOrder } from 'mongoose';
 
 const createSemester = async (
