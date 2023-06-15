@@ -54,6 +54,21 @@
             "date": 1686735361530,
             "name": "/home/zillur-rgb/Documents/GitHub/uni-hero-auth-service/logs/winston/errors/UH-2023-06-14-11-error.log",
             "hash": "a9861e0ade1da9aa6df93b99f56076bd42e7974dc070cdfe8c77463c0ffa8e16"
+        },
+        {
+            "date": 1686737854129,
+            "name": "/home/zillur-rgb/Documents/GitHub/uni-hero-auth-service/logs/winston/errors/UH-2023-06-14-12-error.log",
+            "hash": "2ee7c749390499e1bd3b1d97c19d5d5d94f0306989042ce3502bd3236c064d3c"
+        },
+        {
+            "date": 1686755293549,
+            "name": "/home/zillur-rgb/Documents/GitHub/uni-hero-auth-service/logs/winston/errors/UH-2023-06-14-17-error.log",
+            "hash": "baa0d45058cb58607181aacd0c0c2c4d9cd6d94649e205c05fb3baaa785ec49b"
+        },
+        {
+            "date": 1686788207056,
+            "name": "/home/zillur-rgb/Documents/GitHub/uni-hero-auth-service/logs/winston/errors/UH-2023-06-15-02-error.log",
+            "hash": "4c7c7c870a7cbfb77c117903eebed7a6c50e6185434c0e2fb7e08dbc170fb16e"
         }
     ],
     "hashType": "sha256"
