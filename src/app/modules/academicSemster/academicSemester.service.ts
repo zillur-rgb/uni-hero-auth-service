@@ -52,35 +52,9 @@ const getAllSemesters = async (
     });
   }
 
-  /**
-  //  * Now we will run an or operation to check searchTerm with different
-  //  * property in our collection. But as we have to do some repititive
-  //  * things therefore we can optimize this solution.
-  //  */
-  // const andCondition = [
-  //   {
-  //     $or: [
-  //       {
-  //         code: {
-  //           $regex: searchTerm,
-  //           $options: 'i',
-  //         },
-  //       },
-  //       {
-  //         title: {
-  //           $regex: searchTerm,
-  //           $options: 'i',
-  //         },
-  //       },
-  //       {
-  //         year: {
-  //           $regex: searchTerm,
-  //           $options: 'i',
-  //         },
-  //       },
-  //     ],
-  //   },
-  // ];
+  // if there is andConditions then we pass this to query otherwise we pass empty query
+  const whereConditions =
+    andConditions.length > 0 ? { $and: andConditions } : {};
 
   const { page, limit, skip, sortBy, sortOrder } =
     paginationHelpers.calculatePagination(paginationOptions);
@@ -91,7 +65,7 @@ const getAllSemesters = async (
     sortConditions[sortBy] = sortOrder;
   }
   // And pass this to our query function
-  const result = await AcademicSemester.find({ $and: andConditions })
+  const result = await AcademicSemester.find(whereConditions)
     .sort(sortConditions)
     .skip(skip)
     .limit(limit);
