@@ -5,7 +5,11 @@ import sendResponse from '../../../shared/sendResponse';
 import httpStatus from 'http-status';
 import pick from '../../../shared/pagination';
 import { paginationFields } from '../../../constants/pagination';
-import { IAcadmeicSemester } from './academicSemester.interface';
+import {
+  IAcademicSemesterFilters,
+  IAcadmeicSemester,
+} from './academicSemester.interface';
+import { academicSemesterFilterableFields } from './academicSemester.constant';
 
 const createSemester: RequestHandler = catchAsync(
   async (req: Request, res: Response, next: NextFunction) => {
@@ -27,9 +31,16 @@ const createSemester: RequestHandler = catchAsync(
 
 const getAllSemesters = catchAsync(
   async (req: Request, res: Response, next: NextFunction) => {
+    // Getting the search term from query
+    const filters: IAcademicSemesterFilters = pick(
+      req.query,
+      academicSemesterFilterableFields,
+    ) as IAcademicSemesterFilters;
+    // sending the queries from request and pagination fields(page, limit, sortBy, sortOrder)
     const paginationOptions = pick(req.query, paginationFields);
 
     const result = await AcademicSemesterService.getAllSemesters(
+      filters,
       paginationOptions,
     );
 
