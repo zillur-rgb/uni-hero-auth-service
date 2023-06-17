@@ -6,6 +6,7 @@ import { AcademicSemesterRoute } from './app/modules/academicSemster/academicSem
 import routes from './app/routes';
 import httpStatus from 'http-status';
 import { AcademicFacultyRoute } from './app/modules/academicFaculty/academicFaculty.route';
+import { AcademicDepartmentRoute } from './app/modules/academicDepartment/academicDepartment.routes';
 
 const app: Application = express();
 
@@ -18,6 +19,7 @@ app.use('/api/v1', routes);
 app.use('/api/v1/users', UserRoute);
 app.use('/api/v1/academic-semesters', AcademicSemesterRoute);
 app.use('/api/v1/academic-faculty', AcademicFacultyRoute);
+app.use('/api/v1/academic-department', AcademicDepartmentRoute);
 
 // app.get('/', async (req: Request, res: Response) => {
 //   // res.send('Hello World!')
