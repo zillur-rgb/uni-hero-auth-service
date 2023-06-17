@@ -1,7 +1,8 @@
-import { Schema, model } from 'mongoose'
-import { UserModel, UserTypes } from './user.type'
+import { Schema, model } from 'mongoose';
+import { UserModel, UserTypes } from './user.type';
+import { IUser } from './user.interface';
 
-const userSchema = new Schema<UserTypes>(
+const userSchema = new Schema<IUser>(
   {
     id: {
       type: String,
@@ -16,10 +17,25 @@ const userSchema = new Schema<UserTypes>(
       type: String,
       required: true,
     },
+    student: {
+      type: Schema.Types.ObjectId,
+      ref: 'Student',
+    },
+    // faculty :{
+    //   type: Schema.Types.ObjectId,
+    //   ref: "Faculty"
+    // } ,
+    // Admin: {
+    //   type: Schema.Types.ObjectId,
+    //   ref: "Admin"
+    // }
   },
   {
     timestamps: true,
+    toJSON: {
+      virtuals: true,
+    },
   },
-)
+);
 
-export const User = model<UserTypes, UserModel>('User', userSchema)
+export const User = model<UserTypes, UserModel>('User', userSchema);
