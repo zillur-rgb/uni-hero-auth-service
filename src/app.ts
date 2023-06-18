@@ -7,6 +7,7 @@ import routes from './app/routes';
 import httpStatus from 'http-status';
 import { AcademicFacultyRoute } from './app/modules/academicFaculty/academicFaculty.route';
 import { AcademicDepartmentRoute } from './app/modules/academicDepartment/academicDepartment.routes';
+import { StudentRoute } from './app/modules/student/student.route';
 
 const app: Application = express();
 
@@ -17,6 +18,7 @@ app.use(express.urlencoded({ extended: true }));
 // Aplication route
 app.use('/api/v1', routes);
 app.use('/api/v1/users', UserRoute);
+app.use('/api/v1/students', StudentRoute);
 app.use('/api/v1/academic-semesters', AcademicSemesterRoute);
 app.use('/api/v1/academic-faculty', AcademicFacultyRoute);
 app.use('/api/v1/academic-department', AcademicDepartmentRoute);
