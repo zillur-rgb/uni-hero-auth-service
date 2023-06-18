@@ -1,5 +1,5 @@
 import { bloodGroup } from './student.constant';
-import { Schema } from 'mongoose';
+import { Schema, model } from 'mongoose';
 import { IStudent, StudentModel } from './student.interface';
 
 export const StudentSchema = new Schema<IStudent, StudentModel>(
@@ -131,3 +131,5 @@ export const StudentSchema = new Schema<IStudent, StudentModel>(
     },
   },
 );
+
+export const Student = model<IStudent, StudentModel>('Student', StudentSchema);

@@ -5,7 +5,7 @@ import {
   academicSemesterTitleCodeMapper,
 } from './academicSemester.constant';
 import {
-  IAcadmeicSemester,
+  IAcademicSemester,
   IAcademicSemesterFilters,
 } from './academicSemester.interface';
 import { AcademicSemester } from './academicSemester.model';
@@ -15,8 +15,8 @@ import { paginationHelpers } from '../../../helpers/paginationHelpers';
 import { SortOrder } from 'mongoose';
 
 const createSemester = async (
-  payload: IAcadmeicSemester,
-): Promise<IAcadmeicSemester> => {
+  payload: IAcademicSemester,
+): Promise<IAcademicSemester> => {
   if (academicSemesterTitleCodeMapper[payload.title] !== payload.code) {
     throw new ApiError(httpStatus.BAD_REQUEST, 'Invalid semester code!');
   }
@@ -27,7 +27,7 @@ const createSemester = async (
 const getAllSemesters = async (
   filters: IAcademicSemesterFilters,
   paginationOptions: IPaginationTypes,
-): Promise<IGenericResponse<IAcadmeicSemester[]>> => {
+): Promise<IGenericResponse<IAcademicSemester[]>> => {
   // getting the searchTerm string from filters
   const { searchTerm, ...filtersData } = filters;
 
@@ -83,14 +83,14 @@ const getAllSemesters = async (
 
 const getSingleSemester = async (
   id: string,
-): Promise<IAcadmeicSemester | null> => {
+): Promise<IAcademicSemester | null> => {
   const result = await AcademicSemester.findById(id);
 
   return result;
 };
 const deleteSingleSemester = async (
   id: string,
-): Promise<IAcadmeicSemester | null> => {
+): Promise<IAcademicSemester | null> => {
   const result = await AcademicSemester.findByIdAndDelete(id);
 
   return result;
@@ -99,8 +99,8 @@ const deleteSingleSemester = async (
 // update data
 const updateSemester = async (
   id: string,
-  payload: Partial<IAcadmeicSemester>,
-): Promise<IAcadmeicSemester | null> => {
+  payload: Partial<IAcademicSemester>,
+): Promise<IAcademicSemester | null> => {
   if (
     payload.title &&
     payload.code &&

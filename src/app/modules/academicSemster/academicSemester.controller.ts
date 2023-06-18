@@ -7,7 +7,7 @@ import pick from '../../../shared/pagination';
 import { paginationFields } from '../../../constants/pagination';
 import {
   IAcademicSemesterFilters,
-  IAcadmeicSemester,
+  IAcademicSemester,
 } from './academicSemester.interface';
 import { academicSemesterFilterableFields } from './academicSemester.constant';
 
@@ -41,7 +41,7 @@ const getAllSemesters = catchAsync(async (req: Request, res: Response) => {
     paginationOptions,
   );
 
-  sendResponse<IAcadmeicSemester[]>(res, {
+  sendResponse<IAcademicSemester[]>(res, {
     statusCode: httpStatus.OK,
     success: true,
     message: 'Data successfully retrieved',
@@ -55,7 +55,7 @@ const getSingleSemester = catchAsync(async (req: Request, res: Response) => {
 
   const result = await AcademicSemesterService.getSingleSemester(id);
 
-  sendResponse<IAcadmeicSemester>(res, {
+  sendResponse<IAcademicSemester>(res, {
     statusCode: httpStatus.OK,
     success: true,
     message: 'Semester retrieved succesfully!',
@@ -67,7 +67,7 @@ const deleteSingleSemester = catchAsync(async (req: Request, res: Response) => {
 
   const result = await AcademicSemesterService.deleteSingleSemester(id);
 
-  sendResponse<IAcadmeicSemester>(res, {
+  sendResponse<IAcademicSemester>(res, {
     statusCode: httpStatus.OK,
     success: true,
     message: 'Semester deleted succesfully!',
@@ -82,7 +82,7 @@ const updateSemester = catchAsync(async (req: Request, res: Response) => {
 
   const result = await AcademicSemesterService.updateSemester(id, payload);
 
-  sendResponse<IAcadmeicSemester>(res, {
+  sendResponse<IAcademicSemester>(res, {
     statusCode: httpStatus.OK,
     success: true,
     message: 'Semester updated successfuly!',
